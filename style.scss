@@ -1,0 +1,233 @@
+html, body{
+    margin: 0;
+    
+}
+
+
+header {
+  height: 58%;
+  background-color: #557ab9;
+
+  nav {
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    border-radius: 70%;
+    margin-left:32%;
+    height: 210px;
+    width:60%;
+
+      /* Borda neon */
+  border: 3px solid #00f7ff;
+  box-shadow:
+    0 0 8px #00f7ff,
+    0 0 16px #00f7ff,
+    0 0 32px #00f7ff;
+  }
+
+  .texto {
+    max-width: 50%;
+    text-align: center;
+    margin-left: 10%;
+  }
+
+  h1 {
+    color: #87cde8;
+  }
+
+  p {
+    color: aliceblue;
+  }
+
+  /* 🔹 REDES SOCIAIS */
+  .redes-sociais {
+    display: flex;
+    gap: 15px;          // espaço entre os ícones
+    justify-content: center;
+    margin-left:90px;
+    margin-top: 20px;
+  }
+
+  .redes {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .redes:hover {
+    transform: scale(1.1);
+  }
+
+
+  @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* SOBE LOGO + ÍCONES */
+  .topo {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    margin: 0;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+height: 180px;
+margin-left: 30px;
+  }
+
+  .texto {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .redes-sociais {
+    display: flex;
+    text-align: center;
+    margin-right: 60px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+}
+}
+
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 600px; /* Garante que o carrossel tenha altura */
+  background-color: #ffffff;
+  overflow: hidden; /* Importante para não criar barra de rolagem na página toda */
+  position: relative;
+}
+
+.carousel__track-container {
+  width: 80%;
+  height: 550px; 
+  position: relative;
+  overflow: hidden; /* Esconde as imagens que não estão no centro */
+}
+
+.carousel__track {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Permite o movimento livre dentro do container */
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  gap: 30px;
+  transition: transform 0.5s ease-out;
+}
+
+.carousel__item {
+  width: 200px; /* Largura fixa para facilitar o cálculo */
+  height: 450px;
+  flex-shrink: 0;
+  transition: all 0.5s ease;
+  opacity: 0.3;
+  transform: scale(0.8);
+}
+
+.carousel__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mostra a imagem inteira 576x1280 */
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.carousel__item.active {
+  opacity: 1;
+  transform: scale(1.1); /* Destaque */
+}
+
+.carousel__arrow {
+  cursor: pointer;
+  z-index: 100;
+  background: #87cde8;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+
+
+/* Centraliza a section e organiza os cards em linha */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;          /* espaço entre os vídeos */
+  padding: 40px;
+  background-color: #557ab9;
+  margin-bottom: 50px;
+  flex-wrap: wrap;    /* quebra no mobile */
+}
+
+.card-image {
+  width: 300px;       /* tamanho ideal */
+  height: 460px;      /* altura proporcional ao embed do LinkedIn */
+  overflow: hidden;   /* MUITO IMPORTANTE */
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-image iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+
+.rodape {
+  background: #557ab9;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.rodape p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.icon-shopee img {
+  width: 40px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* efeito hover */
+.icon-shopee img:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 6px #ee4d2d,
+    0 0 12px #ee4d2d;
+}
+
+
